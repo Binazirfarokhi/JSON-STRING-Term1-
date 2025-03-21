@@ -1,0 +1,17 @@
+[
+    {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "publishedYear": 1937,
+      "genres": ["Fantasy", "Adventure"],
+      "available": true
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "publishedYear": 1949,
+      "genres": ["Dystopian", "Political Fiction"],
+      "available": false
+    }
+  ]
+  
