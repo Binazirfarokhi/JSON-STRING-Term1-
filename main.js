@@ -1,5 +1,9 @@
 // What is Jason  format : 
-// we are going to learn about APIs , and communication between frontend and backend. 
+// But first you should know the server and client meaning 
+// we have two different terminologhy that you guys should know:
+// 1. "client-side" refers to actions and code that run on the user's device (like a browser), while "server-side" refers to actions and code that run on a web server. Now what is JSON? (JavaScript Object Notation) is a data format used for exchanging data between clients and servers.
+// ****************************************
+// we are going to learn about  communication between frontend and backend. not exaclty the server side but what is happening in the middle and the basic knowledge. 
 // Jason is a text formant used to store and exchange data, it is used everywhere, APIS, configuration files , database , etc. 
 // Imagin you are sending data from a website to a server, or from one app to another, Jason is the universal languge that most systems understand. 
 
