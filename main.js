@@ -131,7 +131,15 @@ fetch('book.json')
     })
   
 
-// let's create a table from a real API : 
+// let's create a table from a real API : we will use a public API 
+// if you are going to use an API you should have the bagivese URL 
+// there are some extension you can add to your brower to help you read the json file better and one of them is JSON viewer it will format it for you.
+https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?pli=1
+
+// publice API documentation 
+// https://www.sfu.ca/outlines/help/api.html
+
+// there are some Public API you can use and you do not need to sign up for their services.
 // https://jsonplaceholder.typicode.com/users
 // you will see a bunch of JSON 
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -157,3 +165,43 @@ fetch('https://jsonplaceholder.typicode.com/users')
             cell3.textContent = user.email;
         }
 })
+
+// now let's talk about async functions: this code above usually works, but if things get complex we need to wait for data from server, and JS will run without wating , then we need to make sure our code is ready for all situations: 
+// in this way we will use async/await to help us pause the code and wait for the response, so we can write it in a way that looks like normal code. 
+// now instead of using fetch .then .then I am going to use 
+async function getJson(){
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');//This waits for the API to respond before moving on.
+    const data = await response.json();//Waits for the JSON to be converted into a JS object.
+    console.log(data);
+
+}
+getJson();
+async function loadUsersIntoTable() {
+    
+      // 1. Fetch the data
+      const response = await fetch('https://jsonplaceholder.typicode.com/users');//This waits for the API to respond before moving on.
+      const users = await response.json();//Waits for the JSON to be converted into a JS object.
+  
+      // 2. Get the table
+      const table = document.getElementById("asyncTable");
+
+  
+      // 4. Loop through users and add rows
+      for (let i = 0; i < users.length; i++) {
+        const user = users[i];
+        const row = table.insertRow();
+  
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+  
+        cell1.textContent = user.name;
+        cell2.textContent = user.username;
+        cell3.textContent = user.email;
+      }
+    
+  }
+  
+  // 5. Call the function
+  loadUsersIntoTable();
+  
