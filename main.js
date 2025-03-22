@@ -56,6 +56,7 @@ console.log(personObj.age);
 // Now what is API ? 
 // API stands for Application Programming Interface.
 // But don't worry about the fancy words—an API is just a way for one program (like a website) to ask another program (like a server) for data.
+// imagin you are at the restaurant 
 // example : You (Client): The person ordering food (you want something)
 // Menu: The list of options you can request (API documentation)
 // Waiter (API): Delivers your order to the kitchen and brings back your food
@@ -63,8 +64,7 @@ console.log(personObj.age);
 // now we have a terminology called : fetch() : means go and 'bring' me something
 //  now I want to create a JSON file and fetch data form that and show you the meaning of API and JSON 
 // ***************************************************** 
-// GO ahead and create a JSON file please , in JSON file , is just a format you need to just organize data in that. now let's fetch data from our JSON file : 
-// now before jumping to jason, how would you read a data into a talbe . imagine if I have an array of object and I want to showcase the data in the table:
+// now lets create a JSON here in our JS file and the read the data inot our table . imagine if I have an array of object and I want to showcase the data in the table:
 const dataToRead = [
     {
       "title": "The Hobbit",
@@ -112,7 +112,7 @@ fetch('book.json')
     .then(data => {
         const table = document.getElementById("bookTable");
         for (let i = 0; i < data.length; i++){
-            const book = data[i];//I want to create a variable and call it book and data[i] is the array we get from book.json- indeed I want to select one book object from that array during each loop iteration.
+            const book = data[i];//get each user object
             const tableRow = table.insertRow(); // Insert new row
 
             // Insert cells with data
