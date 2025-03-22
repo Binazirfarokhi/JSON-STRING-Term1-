@@ -40,11 +40,11 @@ const book = {
     available: true
 };
 // now we can convert between JSON and JS Objects. 
-// let's convert object to JSON : I have this ability to change these data to eachother
+// let's convert object to JSON 
 // JSON.stringify() :
 const bookJSON = JSON.stringify(book);
 console.log(bookJSON);
-// now let's do viceversa: 
+// now Jason to Object
 // JSON.parse() : JSON string to Object 
 const personObj = JSON.parse(studentJSON);
 console.log(personObj);
